@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+* {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(14, 174, 87, 1) 0%, rgba(12, 116, 117, 1) 90%);
+  font-family: 'Kaushan Script', cursive;
+}
+
+.App {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.nav-link {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-options {
+  display: flex;
+  justify-content: center;
+  margin: 15px;
+  gap: 30px;
+}
+
+
+
+.nav-text {
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 28px;
+  color: rgb(235, 231, 231);
+
+  &:hover {
+    transition: 0.5s;
+    color: green;
+  }
+}
+
+.back-button {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+.joke-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  width: 100%;
+  max-width: 50vw;
+  max-height: 40vh;
+  margin: 0 25px;
+  table-layout: fixed;
+}
+
+.joke-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-shrink: 1;
+  margin-bottom: 20px;
+  padding: 10px;
+  word-wrap: break-word;
+  width: 100%;
+  border: 3px solid rgb(74, 189, 74);
+  border-radius: 5px;
+  ;
+
+}
+
+.joke-text {
+  display: flex;
+  text-decoration: none;
+  color: rgb(235, 231, 231);
+  justify-content: center;
+  font-size: 20px;
+  gap: 5px;
+
+  &:hover {
+    color: green;
+    transition: 0.5s;
+  }
+}
+
+.joke-text-individual {
+  text-decoration: none;
+  color: rgb(235, 231, 231);
+  font-size: 20px;
+  gap: 5px;
+  margin-right: 5px;
+  padding: 5px;
+}
+
+.joke-index {
+  font-weight: bold;
+  text-align: left;
+  max-width: 3vw;
+  max-height: 3vh;
+}
+
+.jokes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.bold-text {
+  color: rgb(248, 198, 198);
+}
+
+.active {
+  font-size: 28px;
+  color: greenyellow;
+  text-decoration: none;
+}
+
+.unactive {
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 28px;
+  color: rgb(235, 231, 231);
+
+  &:hover {
+    transition: 0.5s;
+    color: green;
+  }
+}
