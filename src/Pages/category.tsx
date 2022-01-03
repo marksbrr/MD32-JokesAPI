@@ -1,13 +1,12 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import { useParams, useNavigate, Outlet } from 'react-router';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLongArrowAltLeft } from '@fortawesome/free-solid-svg-icons';
-import { useGetJokesByCategoryQuery, useGetAllCategoriesQuery } from '../services/jokes';
+import { useGetJokesByCategoryQuery } from '../services/jokes';
 
 const Category = () => {
   const { id } = useParams<'id'>();
-  const { data: joke } = useGetJokesByCategoryQuery(id as string);
+  const { data: joke } = useGetJokesByCategoryQuery(id || '')
 
   if (joke?.error) {
     return <h2>This category is empty</h2>;

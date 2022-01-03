@@ -1,16 +1,16 @@
 import {
-  Link, Outlet, useNavigate, useParams,
+  Link, useParams,
 } from 'react-router-dom';
-import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLongArrowAltLeft } from '@fortawesome/free-solid-svg-icons';
 import { useGetIndividualJokeByIdQuery } from '../services/jokes';
 
 const Joke = () => {
-  const { id } = useParams<'id'>();
-  const { data: IndividualJoke } = useGetIndividualJokeByIdQuery(id as string);
+  const { id } = useParams<"id">();
+  const { data: IndividualJoke } = useGetIndividualJokeByIdQuery(id || '');
 
   return (
+    <>
     <div>
       <div className="back-button">
         <Link to={`/categories/${IndividualJoke?.category}`} className="nav-text">
@@ -36,6 +36,7 @@ const Joke = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

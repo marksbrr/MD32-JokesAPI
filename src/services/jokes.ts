@@ -48,8 +48,8 @@ type Categories = {
       alias: string,
       resolved: string
     },
-  ]
-  timestamp: number,
+  ],
+  timestamp: number
 }
 
 export const jokesApi = createApi({
